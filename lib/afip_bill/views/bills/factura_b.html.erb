@@ -9,7 +9,7 @@
 <div style="left:434.42px;top:272.66px" class="cls_011"><span class="cls_011">Imp. Bonif.</span></div>
 <div style="left:520.50px;top:272.66px" class="cls_011"><span class="cls_011">Subtotal</span></div>
 
-<% top = 293 %>
+<% top = 288 %>
   <% @line_items.each_with_index do |line_item, index| %>
   <div style="left:18.00px;top:<%= top %>px" class="cls_008"><span class="cls_008"><%= (index + 1).to_s.rjust(3, "0") %></span></div>
   <div style="left:57.00px;top:<%= top %>px" class="cls_008"><span class="cls_008"><%= line_item.name %></span></div>
@@ -23,9 +23,9 @@
 <% end %>
 
 <div style="left:444.50px;top:616.59px" class="cls_002"><span class="cls_002">Subtotal: $</span></div>
-<div style="width:60px;left:89.6%;top:616.59px" class="cls_002"><span class="cls_002"><%= afip_bill["imp_total"] %></span></div>
+<div style="width:60px;left:88.8%;top:616.59px" class="cls_002"><span class="cls_002"><%= afip_bill["imp_total"] %></span></div>
 <div style="left:382.49px;top:634.59px" class="cls_002"><span class="cls_002">Importe Otros Tributos: $</span></div>
-<div style="left:555.49px;top:634.59px" class="cls_002"><span class="cls_002">0,00</span></div>
+<div style="width:60px;left:88.8%;top:634.59px" class="cls_002"><span class="cls_002">0,00</span></div>
 <div style="left:415.99px;top:652.54px" class="cls_005"><span class="cls_005">Importe Total: $</span></div>
 <div style="width:60px;left:88.8%;top:652.54px" class="cls_005"><span class="cls_005"><%= afip_bill["imp_total"] %></span></div>
 
