@@ -64,7 +64,7 @@ module AfipBill
         cbte_tipo: afip_bill["cbte_tipo"],
         pto_venta: AfipBill.configuration[:sale_point],
         cae: afip_bill["cae"],
-        vto_cae: afip_bill["cae_due_date"]
+        vto_cae: afip_bill["cae_fch_vto"]
       }
     end
 

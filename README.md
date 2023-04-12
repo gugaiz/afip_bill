@@ -39,7 +39,7 @@ It must contain at least these attributes:
 ```ruby
 json_bill = {
   cae: "1234567890123",       # CAE number
-  cae_due_date: "20171125",   # CAE expiry date
+  cae_fch_vto: "20171125",   # CAE expiry date
   doc_nro: "12345678901",     # CUIT number
   cbte_tipo: "01",            # Bill type (01 = A, 06 = B, 11 = C)
   cbte_fch: "20170125",       # Bill date
