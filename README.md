@@ -40,13 +40,13 @@ It must contain at least these attributes:
 json_bill = {
   cae: "1234567890123",       # CAE number
   cae_due_date: "20171125",   # CAE expiry date
-  doc_num: "12345678901",     # CUIT number
+  doc_nro: "12345678901",     # CUIT number
   cbte_tipo: "01",            # Bill type (01 = A, 06 = B, 11 = C)
   cbte_fch: "20170125",       # Bill date
   imp_neto: 220.0,            # Net amount
   imp_iva: 46.2,              # IVA amount
   imp_total: 266.2,           # Total amount
-  cbte_hasta: 1,              # Voucher number
+  cbte_nro: 1,              # Voucher number
   fch_serv_desde: "20170101", # Invoiced from
   fch_serv_hasta: "20170131", # Invoiced to
   fch_vto_pago: "20170115"    # CAE expiration date

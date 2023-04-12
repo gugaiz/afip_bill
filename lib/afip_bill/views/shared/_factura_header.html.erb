@@ -166,7 +166,7 @@
   <div style="left:341.00px;top:84.24px" class="cls_002"><span class="cls_002">Punto de Venta:</span></div>
   <div style="left:417.00px;top:84.04px" class="cls_005"><span class="cls_005"><%= AfipBill.configuration[:sale_point] %></span></div>
   <div style="left:461.00px;top:84.24px" class="cls_002"><span class="cls_002">Comp. Nro:</span></div>
-  <div style="left:517.00px;top:84.04px" class="cls_005"><span class="cls_005"><%= afip_bill["cbte_hasta"].to_s.rjust(8, "0") %></span></div>
+  <div style="left:517.00px;top:84.04px" class="cls_005"><span class="cls_005"><%= afip_bill["cbte_nro"].to_s.rjust(8, "0") %></span></div>
   <div style="left:21.00px;top:101.59px" class="cls_002"><span class="cls_002">Razón Social:</span><span class="cls_006"> <%= AfipBill.configuration[:business_name] %></span></div>
   <div style="left:341.00px;top:100.41px" class="cls_002"><span class="cls_002">Fecha de Emisión:</span></div>
   <div style="left:428.00px;top:99.54px" class="cls_005"><span class="cls_005"><%= Date.parse(afip_bill["cbte_fch"]).strftime("%d/%m/%Y") %></span></div>
@@ -189,7 +189,7 @@
   <% end %>
 
   <div style="left:21.00px;top:189.59px" class="cls_002"><span class="cls_002">CUIT:</span></div>
-  <div style="left:52.00px;top:189.59px" class="cls_006"><span class="cls_006"><%= afip_bill["doc_num"] %></span></div>
+  <div style="left:52.00px;top:189.59px" class="cls_006"><span class="cls_006"><%= afip_bill["doc_nro"] %></span></div>
   <div style="left:205.97px;top:189.59px" class="cls_002"><span class="cls_002">Apellido y Nombre / Razón Social:</span></div>
   <div style="left:354.00px;top:190.63px" class="cls_008"><span class="cls_008"><%= bill_type == "a" ? user.company_name : user.owner_name %></span></div>
   <div style="left:21.00px;top:208.59px" class="cls_002"><span class="cls_002">Condición frente al IVA:</span></div>

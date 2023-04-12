@@ -60,7 +60,7 @@ module AfipBill
 
     def code_hash
       {
-        cuit: afip_bill["doc_num"].tr("-", "").strip,
+        cuit: afip_bill["doc_nro"].tr("-", "").strip,
         cbte_tipo: afip_bill["cbte_tipo"],
         pto_venta: AfipBill.configuration[:sale_point],
         cae: afip_bill["cae"],
