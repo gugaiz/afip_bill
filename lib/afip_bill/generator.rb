@@ -60,11 +60,11 @@ module AfipBill
 
     def code_hash
       {
-        cuit: afip_bill["doc_nro"].tr("-", "").strip,
+        cuit: afip_bill["doc_nro"].to_s.tr("-", "").strip,
         cbte_tipo: afip_bill["cbte_tipo"],
         pto_venta: AfipBill.configuration[:sale_point],
         cae: afip_bill["cae"],
-        vto_cae: afip_bill["cae_fch_vto"]
+        vto_cae: afip_bill["cae_fch_vto"].tr("-","")
       }
     end
 
@@ -79,7 +79,7 @@ module AfipBill
     def hide_service_dates?
       @afip_bill['concepto'] == PRODUCT_CONCEPT_CODE
     end
-    
+
     def format_amount(amount)
       ('%.2f' % amount.round(2).to_s).tr('.', ',')
     end
